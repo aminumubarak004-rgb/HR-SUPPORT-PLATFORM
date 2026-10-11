@@ -35,12 +35,28 @@
       }
 
       body {
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
         background-image:
           linear-gradient(120deg, rgba(248, 244, 235, 0.78), rgba(248, 244, 235, 0.82)),
           url("The%20Tax%20Cup%20Modern%20Finance%20Workspace.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      body > * {
+        position: relative;
+        z-index: 1;
       }
 
       .login-shell {

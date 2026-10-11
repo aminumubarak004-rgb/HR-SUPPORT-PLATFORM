@@ -193,8 +193,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(rootDir, { index: false }));
-
 app.get('/login.html', (req, res, next) => {
   if (getSessionUser(req)) {
     return res.redirect('/index.html');
@@ -229,6 +227,8 @@ app.get('/payroll.html', (req, res) => {
   }
   res.sendFile(path.join(rootDir, 'payroll.html'));
 });
+
+app.use(express.static(rootDir, { index: false }));
 
 app.get('*', (req, res) => {
   if (!getSessionUser(req)) return res.redirect('/login.html?redirect=index.html');
