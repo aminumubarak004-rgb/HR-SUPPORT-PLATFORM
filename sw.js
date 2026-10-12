@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tax-cup-pwa-v3';
+const CACHE_NAME = 'tax-cup-pwa-v4';
 const APP_SHELL = [
   './',
   './index.html',
@@ -25,7 +25,7 @@ const APP_SHELL = [
   './payroll.js',
   './login.js',
   './tax-cup-logo.svg',
-  './The%20Tax%20Cup%20Modern%20Finance%20Workspace.png',
+  './Professional%20Payroll%20Workspace%20Hero%20%281%29.png',
   './manifest.json'
 ];
 
