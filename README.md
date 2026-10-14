@@ -30,7 +30,16 @@ Recommended production tables are `employees`, `users`, `roles`, `permissions`, 
 
 ## Run it
 
-Open `index.html` in a browser. No installation or build step is required. In VS Code, use **Open with Live Server** if that extension is installed.
+Start the local app server from the project folder:
+
+- `node server.js`
+- or on Windows, double-click `start.cmd`
+
+Then open `http://localhost:3000/login.html` in the browser.
+
+> If PowerShell blocks `npm start` on your machine, run the server directly with `node server.js` instead. This avoids the execution policy problem without changing the app itself.
+
+The calculator pages are also usable through a browser if you prefer to open a single HTML file, but the authenticated workflow and protected routes are intended to run through the Express server.
 
 ## Current model
 
